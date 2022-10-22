@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-16">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="src/favicon1.ico" type="image/x-icon">
+    <title>FastNote - Asistente virtual</title>
+</head>
+<body class="holy-grail">
+    <main>
+        <header>
+            <img src="src/logo2.png" alt="">
+            <div>
+                <button id="add-button">+ Agregar Nota</button>
+                <button id="add-button" onclick="makeListWork()">+ Agregar Tarea</button>
+            </div>
+        </header>
+        <div class="holy-grail-body">
+            <div class="holy-grail-sidebar">
+                <div class="holy-grail-sidebar-searcher">
+                    <input type="text" id="search" placeholder="Buscar">
+                    <input type="button" value="🔍︎" class="searched-container">
+                    <!-- <span class="searched-container"><img src="../src/buscar.png" width="30px"></span> -->
+                </div>
+                <div id="pomodoro-principal">
+                    
+                </div>
+                <div class="holy-grail-sidebar-workspace">
+                    <p>Espacio de Trabajo</p>
+                    <hr>
+                    <nav>
+                        <label for="notes"><span class="sidebar-options">Notas</span></label>
+                        <input type="checkbox" id="notes">
+                        <ul class="slide-1">
+                            <li onclick="renderNotes()">Tus notas</li>
+                            <li onclick="renderLabels()">Etiquetas</li>
+                            <li onclick="makeNote()">+ Agregar Nota</li>
+                            
+                        </ul>
+                    </nav>
+                    <nav>
+                        <label for="list"><span class="sidebar-options">Listas</span></label>
+                        <input type="checkbox" id="list">
+                        <ul class="slide-2">
+                            <li onclick="renderList()">Lista de tareas</li>
+                            <li onclick="makeListWork()">+ Agregar Tarea</li>
+                        </ul>
+                    </nav>
+                    <nav onclick="createPomodoro()">
+                        <span class="pomodoro sidebar-options">Crear Pomodoro</span>
+                        <!-- <input type="checkbox" id="pomodoro"> -->
+                    </nav>
+                </div>
+            </div>
+            <section class="holy-grail-content" id="principal-container">
+                <p class="initial-content">Escoja una de las opciones del panel para empezar</p>
+            </section>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
